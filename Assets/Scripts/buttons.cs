@@ -31,11 +31,24 @@ public class buttons : MonoBehaviour {
                 SceneManager.LoadScene("Info");
                 break;
             case "Home":
+                GameObject MainCamera = GameObject.Find("Main Camera");
+               MainCamera.GetComponent<RendBlock>().Back.SetActive(true);
+                break;
             case "OK":
                 SceneManager.LoadScene("MainMenu");
                 break;
             case "facebook":
                 Application.OpenURL("http://facebook.com");
+                break;
+            case "Leave":
+                SceneManager.LoadScene("MainMenu");
+                break;
+            case "Stay":
+                GameObject Camera = GameObject.Find("Main Camera");
+                Camera.GetComponent<RendBlock>().Back.SetActive(false);
+                break;
+            case "exit":
+                Application.Quit();
                 break;
         }
     }

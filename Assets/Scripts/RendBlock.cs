@@ -13,6 +13,7 @@ public class RendBlock : MonoBehaviour {
     private int Score;
     public Text score;
     public GameObject Panel;
+    public GameObject Back;
     #endregion
     #region функции
     //создаем сетку из объектов
